@@ -2,6 +2,10 @@
 
 A collection of Adwaita-based UI components for React.
 
+## Install
+
+[Follow this guide to cleanly install the components](https://github.com/oscar370/adw-components-react/wiki#install)
+
 ## Features
 
 - Adwaita-inspired design system
@@ -12,18 +16,24 @@ A collection of Adwaita-based UI components for React.
 
 ## Project Structure
 
-- `src/components/ui/`: All UI components
+- `components/ui/`: All UI components
+- `lib/i18next/locales/`: Translation files (en, es)
+- `index.css`: Base styles and color variables
+- `hooks/`: Custom hooks used by components
 - `src/app/`: Demo application
-- `src/lib/i18next/locales/`: Translation files (en, es)
-- `src/index.css`: Base styles and color variables
-- `src/hooks/`: Custom hooks used by components
 
-## Quick start
+## Demo development
+
+Clone repository:
+
+```bash
+git clone https://github.com/oscar370/adw-components-react.git
+```
 
 Install dependencies:
 
 ```bash
-pnpm install
+pnpm i
 ```
 
 Start demo:
@@ -37,11 +47,3 @@ Run Storybook:
 ```bash
 pnpm storybook
 ```
-
-## Translation
-
-Translations managed via i18next. Supported languages: Spanish (es), English (en). Add new translations in `src/lib/i18next/locales/`.
-
-## Styling
-
-`index.css` contains base color variables. Modify here to change theme colors.
