@@ -2,6 +2,8 @@
 
 A collection of Adwaita-based UI components for React.
 
+[Click here to see the demo](https://adw-components-react.netlify.app/)
+
 ## Install
 
 [Follow this guide to cleanly install the components](https://github.com/oscar370/adw-components-react/wiki#install)
