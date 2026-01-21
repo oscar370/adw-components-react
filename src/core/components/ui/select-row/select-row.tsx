@@ -4,7 +4,6 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import { clsx } from "clsx";
 import { Check, ChevronDown } from "lucide-react";
 
 type Option<T extends string | number> = {
@@ -16,7 +15,6 @@ type SelectRowProps<T extends string | number> = {
   title: string;
   subtitle?: string;
   icon?: React.ReactNode;
-  property?: boolean;
   value: T;
   options: Option<T>[];
   onChange: (value: T) => void;
@@ -26,30 +24,17 @@ export function SelectRow<T extends string | number>({
   title,
   subtitle,
   icon: Icon,
-  property,
   value,
   options,
   onChange,
 }: SelectRowProps<T>) {
-  const rowClasses = clsx(
-    "flex min-h-13 w-full cursor-pointer items-center px-4 text-left transition-colors hover:bg-(--hover)",
-  );
-
-  const titleClasses = clsx(
-    property ? "mb-0.5 text-sm text-(--dim-fg)" : "leading-tight",
-  );
-
-  const subtitleClasses = clsx(
-    !property ? "mt-0.5 text-sm text-(--dim-fg)" : "leading-tight",
-  );
-
   const selectedLabel = options.find((opt) => opt.value === value)?.label;
 
   return (
     <li>
       <Listbox value={value} onChange={onChange}>
         <div className="relative">
-          <ListboxButton className={rowClasses}>
+          <ListboxButton className="flex min-h-13 w-full cursor-pointer items-center px-4 text-left transition-colors hover:bg-(--hover)">
             {Icon && (
               <div aria-hidden="true" className="mr-2 text-(--accent)">
                 {Icon}
@@ -57,8 +42,10 @@ export function SelectRow<T extends string | number>({
             )}
 
             <div className="min-w-0 flex-1">
-              <p className={titleClasses}>{title}</p>
-              {subtitle && <p className={subtitleClasses}>{subtitle}</p>}
+              <p className="leading-tight">{title}</p>
+              {subtitle && (
+                <p className="mt-0.5 text-sm text-(--dim-fg)">{subtitle}</p>
+              )}
             </div>
 
             <div className="ml-4 flex items-center">

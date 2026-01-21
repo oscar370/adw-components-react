@@ -1,11 +1,11 @@
 import { Home, Settings } from "lucide-react";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { ActionRow } from "../ui/action-row";
-import { ListBox } from "../ui/list-box";
-import { ModalManager } from "../ui/modal-manager";
-import { Sidebar } from "../ui/sidebar";
-import { SplitView } from "../ui/split-view";
+import { ActionRow } from "../../core/components/ui/action-row";
+import { ListBox } from "../../core/components/ui/list-box";
+import { ModalManager } from "../../core/components/ui/modal-manager";
+import { Sidebar } from "../../core/components/ui/sidebar";
+import { SplitView } from "../../core/components/ui/split-view";
 
 const SIDEBAR_ELEMENTS = [
   {
@@ -40,7 +40,7 @@ export function SidebarLayout() {
                   as={Link}
                   to={to}
                   icon={<Icon />}
-                  accent="(--text)"
+                  accent="text-(--text)"
                   isActive={location.pathname === to}
                   onClick={() => toggleSidebar()}
                 />

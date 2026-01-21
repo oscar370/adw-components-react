@@ -1,10 +1,10 @@
-import { ActionRow } from "@/components/ui/action-row";
-import { EntryRow } from "@/components/ui/entry-row";
-import { ListBox } from "@/components/ui/list-box";
-import { modal } from "@/components/ui/modal-manager";
-import { NavigationPage } from "@/components/ui/navigation-page";
-import { SelectRow } from "@/components/ui/select-row";
-import { SwitchRow } from "@/components/ui/switch-row";
+import { ActionRow } from "@/core/components/ui/action-row";
+import { EntryRow } from "@/core/components/ui/entry-row";
+import { ListBox } from "@/core/components/ui/list-box";
+import { modal } from "@/core/components/ui/modal-manager";
+import { NavigationPage } from "@/core/components/ui/navigation-page";
+import { SelectRow } from "@/core/components/ui/select-row";
+import { SwitchRow } from "@/core/components/ui/switch-row";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Carousel } from "@/components/ui/carousel";
-import { NavigationPage } from "@/components/ui/navigation-page";
+import { Button } from "@/core/components/ui/button";
+import { Carousel } from "@/core/components/ui/carousel";
+import { NavigationPage } from "@/core/components/ui/navigation-page";
 
 export function Home() {
   return (

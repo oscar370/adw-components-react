@@ -18,14 +18,7 @@ A collection of Adwaita-based UI components for React.
 - `src/index.css`: Base styles and color variables
 - `src/hooks/`: Custom hooks used by components
 
-## Dependencies
-
-- Tailwind CSS
-- Framer Motion
-- Headless UI
-- i18next
-
-## Quick guide
+## Quick start
 
 Install dependencies:
 

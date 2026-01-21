@@ -1,8 +1,8 @@
-import { ActionRow } from "@/components/ui/action-row";
-import { Button } from "@/components/ui/button";
-import { ListBox } from "@/components/ui/list-box";
-import { modal } from "@/components/ui/modal-manager";
-import { NavigationPage } from "@/components/ui/navigation-page";
+import { ActionRow } from "@/core/components/ui/action-row";
+import { Button } from "@/core/components/ui/button";
+import { ListBox } from "@/core/components/ui/list-box";
+import { modal } from "@/core/components/ui/modal-manager";
+import { NavigationPage } from "@/core/components/ui/navigation-page";
 import { Trash2 } from "lucide-react";
 import { useState } from "react";
 

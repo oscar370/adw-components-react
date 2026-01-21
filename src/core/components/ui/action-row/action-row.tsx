@@ -83,10 +83,7 @@ export function ActionRow({
     componentProps.href = href;
   }
 
-  const iconClasses = clsx(
-    "mr-2",
-    accent ? `text-${accent}` : "text-(--accent)",
-  );
+  const iconClasses = clsx("mr-2", accent ? accent : "text-(--accent)");
   const titleClasses = clsx(
     property ? "mb-0.5 text-sm text-(--dim-fg)" : "leading-tight",
   );

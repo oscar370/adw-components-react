@@ -15,7 +15,7 @@
   --destructive: #e01b24;
 }
 
-:root:not([data-theme="light"]) {
+:root:has([data-theme="dark"]) {
   --bg: #222226;
   --fg: #ffffff;
   --dim-fg: #a0a0a0;

@@ -1,10 +1,7 @@
-import clsx from "clsx";
-
 type SwitchRowProps = {
   title: string;
   subtitle?: string;
   icon?: React.ReactNode;
-  property?: boolean;
   checked: boolean;
   onChange: () => void;
 };
@@ -13,33 +10,22 @@ export function SwitchRow({
   title,
   subtitle,
   icon: Icon,
-  property,
   checked,
   onChange,
 }: SwitchRowProps) {
-  const labelClasses = clsx(
-    "flex min-h-13 cursor-pointer items-center px-4 transition-colors hover:bg-(--hover)",
-  );
-
-  const titleClasses = clsx(
-    property ? "mb-0.5 text-sm text-(--dim-fg)" : "leading-tight",
-  );
-
-  const subtitleClasses = clsx(
-    !property ? "mt-0.5 text-sm text-(--dim-fg)" : "leading-tight",
-  );
-
   return (
     <li>
-      <label className={labelClasses}>
+      <label className="flex min-h-13 cursor-pointer items-center px-4 transition-colors hover:bg-(--hover)">
         {Icon && (
           <div aria-hidden="true" className="mr-2 text-(--accent)">
             {Icon}
           </div>
         )}
         <div className="min-w-0 flex-1 text-left">
-          <p className={titleClasses}>{title}</p>
-          {subtitle && <p className={subtitleClasses}>{subtitle}</p>}
+          <p className="leading-tight">{title}</p>
+          {subtitle && (
+            <p className="mt-0.5 text-sm text-(--dim-fg)">{subtitle}</p>
+          )}
         </div>
         <div className="ml-4 flex items-center">
           <div
