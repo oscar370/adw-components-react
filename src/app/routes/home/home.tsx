@@ -17,7 +17,7 @@ export function Home() {
 function Welcome() {
   return (
     <div className="relative h-full w-full overflow-hidden bg-linear-to-br from-[#51d148] to-[#0ac8a8]">
-      <div className="absolute inset-0 flex flex-col justify-center gap-2 p-14">
+      <section className="absolute inset-0 flex flex-col justify-center gap-2 p-14">
         <h2 className="text-3xl font-bold tracking-tight drop-shadow-lg">
           Welcome
         </h2>
@@ -46,7 +46,7 @@ function Welcome() {
 
           <span> Go to the repository </span>
         </Button>
-      </div>
+      </section>
     </div>
   );
 }
@@ -54,7 +54,7 @@ function Welcome() {
 function Issues() {
   return (
     <div className="relative h-full w-full overflow-hidden bg-linear-to-br from-[#d1476a] to-[#c70a34]">
-      <div className="absolute inset-0 flex flex-col justify-center gap-2 p-14">
+      <section className="absolute inset-0 flex flex-col justify-center gap-2 p-14">
         <h2 className="text-3xl font-bold tracking-tight drop-shadow-lg">
           Issues or suggestions
         </h2>
@@ -84,7 +84,7 @@ function Issues() {
 
           <span> Go to issues </span>
         </Button>
-      </div>
+      </section>
     </div>
   );
 }
