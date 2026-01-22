@@ -74,7 +74,7 @@ export function Settings() {
 
       <ListBox title="About" description="System information">
         <EntryRow
-          label="Device name"
+          title="Device name"
           value={deviceName}
           onChange={(e) => setDeviceName(e.currentTarget.value)}
         />
