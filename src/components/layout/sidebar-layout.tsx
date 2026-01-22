@@ -35,12 +35,12 @@ export function SidebarLayout() {
             <ListBox as="nav">
               {SIDEBAR_ELEMENTS.map(({ label, to, icon: Icon }) => (
                 <ActionRow
+                  accent="text-(--text)!"
                   key={to}
                   title={label}
                   as={Link}
                   to={to}
                   icon={<Icon />}
-                  accent="text-(--text)"
                   isActive={location.pathname === to}
                   onClick={() => toggleSidebar()}
                 />
