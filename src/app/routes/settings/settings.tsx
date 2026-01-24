@@ -84,10 +84,10 @@ export function Settings() {
         title="User"
         headerButton={
           <Box linked>
-            <Button>
+            <Button aria-label="Edit user">
               <Pencil size={16} />
             </Button>
-            <Button>
+            <Button aria-label="Add user">
               <Plus size={16} />
             </Button>
           </Box>
