@@ -1,11 +1,14 @@
 import { ActionRow } from "@/core/components/ui/action-row";
+import { Box } from "@/core/components/ui/box";
+import { Button } from "@/core/components/ui/button";
+import { ButtonRow } from "@/core/components/ui/button-row";
 import { EntryRow } from "@/core/components/ui/entry-row";
 import { ListBox } from "@/core/components/ui/list-box";
 import { modal } from "@/core/components/ui/modal-manager";
 import { NavigationPage } from "@/core/components/ui/navigation-page";
 import { SelectRow } from "@/core/components/ui/select-row";
 import { SwitchRow } from "@/core/components/ui/switch-row";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Pencil, Plus } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -56,7 +59,12 @@ export function Settings() {
           checked={isWifiEnabled}
           onChange={() => setIsWifiEnabled((prev) => !prev)}
         />
-        <ActionRow as={Link} title="Saved networks" to="saved-networks">
+        <ActionRow
+          as={Link}
+          title="Saved networks"
+          to="saved-networks"
+          forceHover
+        >
           <ChevronRight />
         </ActionRow>
       </ListBox>
@@ -72,6 +80,22 @@ export function Settings() {
         </ActionRow>
       </ListBox>
 
+      <ListBox
+        title="User"
+        headerButton={
+          <Box linked>
+            <Button>
+              <Pencil size={16} />
+            </Button>
+            <Button>
+              <Plus size={16} />
+            </Button>
+          </Box>
+        }
+      >
+        <ActionRow title="Name" subtitle="Oscar" property />
+      </ListBox>
+
       <ListBox title="About" description="System information">
         <EntryRow
           title="Device name"
@@ -79,6 +103,10 @@ export function Settings() {
           onChange={(e) => setDeviceName(e.currentTarget.value)}
         />
         <ActionRow title="SO" subtitle="Solus 4.8" property />
+      </ListBox>
+
+      <ListBox>
+        <ButtonRow variant="suggested">Donate</ButtonRow>
       </ListBox>
     </NavigationPage>
   );
