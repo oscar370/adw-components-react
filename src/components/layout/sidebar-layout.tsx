@@ -31,7 +31,7 @@ export function SidebarLayout() {
     <>
       <SplitView>
         <Sidebar open={isSidebarOpen} onToggle={toggleSidebar}>
-          <Sidebar.Panel>
+          <Sidebar.Panel title="Demo">
             <ListBox as="nav">
               {SIDEBAR_ELEMENTS.map(({ label, to, icon: Icon }) => (
                 <ActionRow
