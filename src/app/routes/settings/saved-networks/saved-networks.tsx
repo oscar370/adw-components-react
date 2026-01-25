@@ -3,8 +3,9 @@ import { Button } from "@/core/components/ui/button";
 import { ListBox } from "@/core/components/ui/list-box";
 import { modal } from "@/core/components/ui/modal-manager";
 import { NavigationPage } from "@/core/components/ui/navigation-page";
-import { Trash2 } from "lucide-react";
+import { ChevronRight, Trash2 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const initialState = ["ALH-21D", "ALH-21D-5"];
 
@@ -36,15 +37,23 @@ export function SavedNetworks() {
   return (
     <NavigationPage title="Saved Networks" isSubPage>
       {networks.length !== 0 ? (
-        <ListBox>
-          {networks.map((net) => (
-            <ActionRow key={net} title={net}>
-              <Button onClick={() => openConfirmationModal(net)}>
-                <Trash2 />
-              </Button>
+        <>
+          <ListBox>
+            {networks.map((net) => (
+              <ActionRow key={net} title={net}>
+                <Button onClick={() => openConfirmationModal(net)}>
+                  <Trash2 />
+                </Button>
+              </ActionRow>
+            ))}
+          </ListBox>
+
+          <ListBox>
+            <ActionRow title="Add new network" as={Link} to={"new"}>
+              <ChevronRight />
             </ActionRow>
-          ))}
-        </ListBox>
+          </ListBox>
+        </>
       ) : (
         <p>No networks added</p>
       )}
