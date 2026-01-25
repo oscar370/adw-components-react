@@ -29,8 +29,8 @@ export function SidebarLayout() {
 
   return (
     <>
-      <SplitView>
-        <Sidebar open={isSidebarOpen} onToggle={toggleSidebar}>
+      <Sidebar open={isSidebarOpen} onToggle={toggleSidebar}>
+        <SplitView>
           <Sidebar.Panel title="Demo">
             <ListBox as="nav">
               {SIDEBAR_ELEMENTS.map(({ label, to, icon: Icon }) => (
@@ -48,11 +48,9 @@ export function SidebarLayout() {
             </ListBox>
           </Sidebar.Panel>
 
-          <div>
-            <Outlet />
-          </div>
-        </Sidebar>
-      </SplitView>
+          <Outlet />
+        </SplitView>
+      </Sidebar>
 
       <ModalManager />
     </>
