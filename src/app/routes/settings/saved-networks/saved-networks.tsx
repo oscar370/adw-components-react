@@ -1,5 +1,6 @@
 import { ActionRow } from "@/core/components/ui/action-row";
 import { Button } from "@/core/components/ui/button";
+import { ExpanderRow } from "@/core/components/ui/expander-row";
 import { ListBox } from "@/core/components/ui/list-box";
 import { modal } from "@/core/components/ui/modal-manager";
 import { NavigationPage } from "@/core/components/ui/navigation-page";
@@ -39,13 +40,15 @@ export function SavedNetworks() {
       {networks.length !== 0 ? (
         <>
           <ListBox>
-            {networks.map((net) => (
-              <ActionRow key={net} title={net}>
-                <Button onClick={() => openConfirmationModal(net)}>
-                  <Trash2 />
-                </Button>
-              </ActionRow>
-            ))}
+            <ExpanderRow title="Networks">
+              {networks.map((net) => (
+                <ActionRow key={net} title={net}>
+                  <Button onClick={() => openConfirmationModal(net)}>
+                    <Trash2 />
+                  </Button>
+                </ActionRow>
+              ))}
+            </ExpanderRow>
           </ListBox>
 
           <ListBox>

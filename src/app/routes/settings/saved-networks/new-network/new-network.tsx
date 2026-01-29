@@ -1,5 +1,6 @@
-import { Button } from "@/core/components/ui/button";
+import { ButtonRow } from "@/core/components/ui/button-row";
 import { Entry } from "@/core/components/ui/entry";
+import { ListBox } from "@/core/components/ui/list-box";
 import { NavigationPage } from "@/core/components/ui/navigation-page";
 import { Controller, useForm } from "react-hook-form";
 
@@ -32,9 +33,9 @@ export function NewNetwork() {
         />
       </div>
 
-      <Button className="mt-4 w-full bg-(--accent)!" variant="pill">
-        Add
-      </Button>
+      <ListBox>
+        <ButtonRow variant="suggested">Add</ButtonRow>
+      </ListBox>
     </NavigationPage>
   );
 }
