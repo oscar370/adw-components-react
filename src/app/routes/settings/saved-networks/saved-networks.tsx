@@ -52,7 +52,7 @@ export function SavedNetworks() {
           </ListBox>
 
           <ListBox>
-            <ActionRow title="Add new network" as={Link} to={"new"}>
+            <ActionRow title="Add new network" as={Link} to={"new"} forceHover>
               <ChevronRight />
             </ActionRow>
           </ListBox>
