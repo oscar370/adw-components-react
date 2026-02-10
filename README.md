@@ -4,6 +4,8 @@ A collection of Adwaita-based UI components for React.
 
 [Click here to see the demo](https://adw-components-react.netlify.app/)
 
+Web application developed with these components: [Website](https://finzenapp.net) - [Repository](https://github.com/oscar370/finzen)
+
 ## Install
 
 [Follow this guide to cleanly install the components](https://github.com/oscar370/adw-components-react/wiki#install)
