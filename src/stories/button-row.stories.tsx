@@ -1,6 +1,6 @@
+import { ButtonRow } from "@/core/components/ui/button-row/button-row";
+import { ListBox } from "@/core/components/ui/list-box";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ListBox } from "../list-box";
-import { ButtonRow } from "./button-row";
 
 const meta = {
   component: ButtonRow,

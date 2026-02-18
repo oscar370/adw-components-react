@@ -1,6 +1,6 @@
+import { EntryRow } from "@/core/components/ui/entry-row";
+import { ListBox } from "@/core/components/ui/list-box";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ListBox } from "../list-box";
-import { EntryRow } from "./entry-row";
 
 const meta = {
   decorators: [

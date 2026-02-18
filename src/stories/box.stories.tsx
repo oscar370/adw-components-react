@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Archive, Pencil } from "lucide-react";
-import { Button } from "../button";
-import { Box } from "./box";
+import { Box } from "../core/components/ui/box/box";
+import { Button } from "../core/components/ui/button";
 
 const meta = {
   component: Box,

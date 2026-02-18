@@ -1,5 +1,5 @@
+import { CurrencyEntry } from "@/core/components/ui/currency-entry";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { CurrencyEntry } from "./currency-entry";
 
 const meta = {
   component: CurrencyEntry,

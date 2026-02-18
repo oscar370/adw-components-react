@@ -1,8 +1,8 @@
+import { ActionRow } from "@/core/components/ui/action-row";
+import { ExpanderRow } from "@/core/components/ui/expander-row";
+import { ListBox } from "@/core/components/ui/list-box";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ChevronRight } from "lucide-react";
-import { ActionRow } from "../action-row";
-import { ListBox } from "../list-box";
-import { ExpanderRow } from "./expander-row";
 
 const meta = {
   component: ExpanderRow,

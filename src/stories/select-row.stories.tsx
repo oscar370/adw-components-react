@@ -1,7 +1,7 @@
+import { ListBox } from "@/core/components/ui/list-box";
+import { SelectRow } from "@/core/components/ui/select-row";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { ListBox } from "../list-box";
-import { SelectRow } from "./select-row";
 
 const meta = {
   component: SelectRow,

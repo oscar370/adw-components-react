@@ -1,5 +1,5 @@
+import { EntrySearch } from "@/core/components/ui/entry-search";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { EntrySearch } from "./entry-search";
 
 const meta = {
   component: EntrySearch,

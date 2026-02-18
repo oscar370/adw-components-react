@@ -1,7 +1,7 @@
+import { ListBox } from "@/core/components/ui/list-box";
+import { SwitchRow } from "@/core/components/ui/switch-row";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { ListBox } from "../list-box";
-import { SwitchRow } from "./switch-row";
 
 const meta = {
   component: SwitchRow,

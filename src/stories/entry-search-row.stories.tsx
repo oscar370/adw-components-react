@@ -1,6 +1,6 @@
+import { EntrySearchRow } from "@/core/components/ui/entry-search-row";
+import { ListBox } from "@/core/components/ui/list-box";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ListBox } from "../list-box";
-import { EntrySearchRow } from "./entry-search-row";
 
 const meta = {
   component: EntrySearchRow,

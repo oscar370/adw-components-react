@@ -1,6 +1,6 @@
+import { Select } from "@/core/components/ui/select";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { Select } from "./select";
 
 const meta = {
   component: Select,

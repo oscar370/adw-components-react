@@ -1,6 +1,6 @@
+import { Carousel } from "@/core/components/ui/carousel";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Mail, Star } from "lucide-react";
-import { Carousel } from "./carousel";
 
 const meta = {
   component: Carousel,

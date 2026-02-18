@@ -1,5 +1,5 @@
+import { Entry } from "@/core/components/ui/entry";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Entry } from "./entry";
 
 const meta = {
   component: Entry,

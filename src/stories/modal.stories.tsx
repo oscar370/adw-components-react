@@ -1,7 +1,7 @@
+import { Button } from "@/core/components/ui/button";
+import { Modal } from "@/core/components/ui/modal";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import { Button } from "../button";
-import { Modal } from "./modal";
 
 const meta = {
   component: Modal,

@@ -38,7 +38,7 @@ export function SavedNetworks() {
   return (
     <NavigationPage title="Saved Networks" isSubPage>
       {networks.length !== 0 ? (
-        <>
+        <div className="*:mt-4">
           <ListBox>
             <ExpanderRow title="Networks">
               {networks.map((net) => (
@@ -56,7 +56,7 @@ export function SavedNetworks() {
               <ChevronRight />
             </ActionRow>
           </ListBox>
-        </>
+        </div>
       ) : (
         <p>No networks added</p>
       )}

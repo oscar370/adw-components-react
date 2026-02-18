@@ -33,7 +33,7 @@ export function NewNetwork() {
         />
       </div>
 
-      <ListBox>
+      <ListBox className="mt-4">
         <ButtonRow variant="suggested">Add</ButtonRow>
       </ListBox>
     </NavigationPage>

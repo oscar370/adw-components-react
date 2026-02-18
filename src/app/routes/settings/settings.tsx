@@ -41,73 +41,78 @@ export function Settings() {
 
   return (
     <NavigationPage title="Settings">
-      <ListBox>
-        <SelectRow
-          title="Schema"
-          onChange={handleSchemaChange}
-          options={[
-            { label: "Dark", value: "dark" },
-            { label: "Light", value: "light" },
-          ]}
-          value={theme}
-        />
-      </ListBox>
+      <div className="*:mt-4">
+        <ListBox>
+          <SelectRow
+            title="Schema"
+            onChange={handleSchemaChange}
+            options={[
+              { label: "Dark", value: "dark" },
+              { label: "Light", value: "light" },
+            ]}
+            value={theme}
+          />
+        </ListBox>
 
-      <ListBox title="Wifi">
-        <SwitchRow
-          title="Enable wifi"
-          checked={isWifiEnabled}
-          onChange={() => setIsWifiEnabled((prev) => !prev)}
-        />
-        <ActionRow
-          as={Link}
-          title="Saved networks"
-          to="saved-networks"
-          forceHover
-        >
-          <ChevronRight />
-        </ActionRow>
-      </ListBox>
+        <ListBox title="Wifi">
+          <SwitchRow
+            title="Enable wifi"
+            checked={isWifiEnabled}
+            onChange={() => setIsWifiEnabled((prev) => !prev)}
+          />
+          <ActionRow
+            as={Link}
+            title="Saved networks"
+            to="saved-networks"
+            forceHover
+          >
+            <ChevronRight />
+          </ActionRow>
+        </ListBox>
 
-      <ListBox title="Bluetooth">
-        <SwitchRow
-          title="Enable bluetooth"
-          checked={isBTEnabled}
-          onChange={() => setIsBTEnabled((prev) => !prev)}
-        />
-        <ActionRow as="button" title="Devices" onClick={showModalDevices}>
-          <ChevronRight />
-        </ActionRow>
-      </ListBox>
+        <ListBox title="Bluetooth">
+          <SwitchRow
+            title="Enable bluetooth"
+            checked={isBTEnabled}
+            onChange={() => setIsBTEnabled((prev) => !prev)}
+          />
+          <ActionRow as="button" title="Devices" onClick={showModalDevices}>
+            <ChevronRight />
+          </ActionRow>
+        </ListBox>
 
-      <ListBox
-        title="User"
-        headerButton={
-          <Box linked>
-            <Button aria-label="Edit user">
-              <Pencil size={16} />
-            </Button>
-            <Button aria-label="Add user">
-              <Plus size={16} />
-            </Button>
-          </Box>
-        }
-      >
-        <ActionRow title="Name" subtitle="Oscar" property />
-      </ListBox>
+        <ListBox.Root title="User">
+          <ListBox.Header>
+            <ListBox.Title>User</ListBox.Title>
+            <ListBox.HeaderAction>
+              <Box linked>
+                <Button aria-label="Edit user">
+                  <Pencil size={16} />
+                </Button>
+                <Button aria-label="Add user">
+                  <Plus size={16} />
+                </Button>
+              </Box>
+            </ListBox.HeaderAction>
+          </ListBox.Header>
+          <ListBox.Content>
+            <ActionRow title="Name" subtitle="Oscar" property />
+          </ListBox.Content>
+        </ListBox.Root>
 
-      <ListBox title="About" description="System information">
-        <EntryRow
-          title="Device name"
-          value={deviceName}
-          onChange={(e) => setDeviceName(e.currentTarget.value)}
-        />
-        <ActionRow title="SO" subtitle="Solus 4.8" property />
-      </ListBox>
+        <ListBox title="About" description="System information">
+          <EntryRow
+            title="Device name"
+            value={deviceName}
+            onChange={(e) => setDeviceName(e.currentTarget.value)}
+          />
+          <ActionRow title="SO" subtitle="Solus 4.8" property />
+        </ListBox>
 
-      <ListBox>
-        <ButtonRow variant="suggested">Donate</ButtonRow>
-      </ListBox>
+        <ListBox>
+          <ButtonRow variant="suggested">Donate</ButtonRow>
+        </ListBox>
+      </div>
     </NavigationPage>
   );
 }

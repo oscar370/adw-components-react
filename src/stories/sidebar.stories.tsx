@@ -1,11 +1,11 @@
+import { ActionRow } from "@/core/components/ui/action-row";
+import { HeaderBar } from "@/core/components/ui/header-bar";
+import { ListBox } from "@/core/components/ui/list-box";
+import { Sidebar } from "@/core/components/ui/sidebar";
+import { SplitView } from "@/core/components/ui/split-view";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Home, User } from "lucide-react";
 import { useState } from "react";
-import { ActionRow } from "../action-row";
-import { HeaderBar } from "../header-bar";
-import { ListBox } from "../list-box";
-import { SplitView } from "../split-view";
-import { Sidebar } from "./sidebar";
 
 const meta = {
   component: Sidebar,

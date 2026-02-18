@@ -1,13 +1,13 @@
+import { ActionRow } from "@/core/components/ui/action-row";
+import { Button } from "@/core/components/ui/button";
+import { ButtonRow } from "@/core/components/ui/button-row";
+import { EntryRow } from "@/core/components/ui/entry-row";
+import { ListBox } from "@/core/components/ui/list-box";
+import { SelectRow } from "@/core/components/ui/select-row";
+import { SwitchRow } from "@/core/components/ui/switch-row";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ChevronRight, HelpCircle, Home, Plus, User } from "lucide-react";
 import { useState } from "react";
-import { ActionRow } from "../action-row";
-import { Button } from "../button";
-import { ButtonRow } from "../button-row";
-import { EntryRow } from "../entry-row";
-import { SelectRow } from "../select-row";
-import { SwitchRow } from "../switch-row";
-import { ListBox } from "./list-box";
 
 const meta = {
   component: ListBox,
