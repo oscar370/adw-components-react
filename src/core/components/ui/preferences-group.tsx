@@ -35,7 +35,7 @@ export function PreferencesGroup({
 						{description && (
 							<p
 								className={cn(
-									"text-dim-foreground mb-1 text-xs",
+									"text-window-foreground/60 text-xs",
 									classList?.description,
 								)}
 							>
