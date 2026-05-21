@@ -45,7 +45,7 @@ export function SelectRow({
 
 				<select
 					className={cn(
-						"bg-button rounded-md px-2 disabled:cursor-not-allowed disabled:opacity-60",
+						"bg-button rounded-md p-2 disabled:cursor-not-allowed disabled:opacity-60",
 					)}
 					{...rest}
 				/>
