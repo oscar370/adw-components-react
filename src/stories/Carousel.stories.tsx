@@ -7,6 +7,7 @@ import {
 	CarouselProvider,
 } from "@/core/components/ui/carousel";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import CustomDocs from "./Carousel.mdx";
 
 const meta = {
 	component: Carousel,
@@ -16,6 +17,11 @@ const meta = {
 		CarouselItem,
 		CarouselPrevious,
 		CarouselNext,
+	},
+	parameters: {
+		docs: {
+			page: CustomDocs,
+		},
 	},
 } satisfies Meta<typeof Carousel>;
 

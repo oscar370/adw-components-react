@@ -12,7 +12,8 @@ Then, install the following dependencies:
 
 ```bash
 # embla-carousel-react is only required if you use the carousel component
-pnpm add class-variance-authority embla-carousel-react clsx lucide-react tailwind-merge 
+# sonner is only required if you use the toast component
+pnpm add class-variance-authority embla-carousel-react clsx lucide-react tailwind-merge sonner
 ```
 
 ### Manual Installation

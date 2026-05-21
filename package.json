@@ -3,10 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "storybook",
+		"dev": "storybook dev -p 6006",
 		"build": "storybook build",
 		"lint": "eslint",
-		"format": "prettier . --write"
+		"format": "prettier . --write",
+		"share": "git subtree push --prefix=src/core core main"
 	},
 	"dependencies": {
 		"class-variance-authority": "^0.7.1",
@@ -16,6 +17,7 @@
 		"next": "16.2.6",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
+		"sonner": "^2.0.7",
 		"tailwind-merge": "^3.5.0"
 	},
 	"devDependencies": {
