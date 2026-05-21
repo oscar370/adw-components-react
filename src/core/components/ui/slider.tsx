@@ -1,7 +1,6 @@
-import { ComponentProps } from "react";
 import { cn } from "../../lib/utils";
 
-type SliderProps = ComponentProps<"input"> & {
+type SliderProps = React.ComponentProps<"input"> & {
 	title?: string;
 	classList?: {
 		root?: string;

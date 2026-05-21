@@ -1,5 +1,4 @@
 import { cva } from "class-variance-authority";
-import { ComponentProps } from "react";
 import { cn } from "../../lib/utils";
 
 const separatorVariants = cva("bg-window-foreground/15 border-none", {
@@ -15,7 +14,7 @@ const separatorVariants = cva("bg-window-foreground/15 border-none", {
 	},
 });
 
-type SeparatorProps = ComponentProps<"div"> & {
+type SeparatorProps = React.ComponentProps<"div"> & {
 	orientation?: "horizontal" | "vertical";
 };
 

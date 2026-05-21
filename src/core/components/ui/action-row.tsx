@@ -1,23 +1,23 @@
-import { ComponentProps, ComponentPropsWithRef, ElementType } from "react";
 import { cn } from "../../lib/utils";
 
-type ActionRowProps<T extends ElementType> = ComponentProps<"div"> & {
-	title: string;
-	subtitle?: string;
-	icon?: React.ReactNode;
-	action?: React.ReactNode;
-	property?: boolean;
-	as?: T;
-	classList?: {
-		root?: string;
-		icon?: string;
-		title?: string;
+type ActionRowProps<T extends React.ElementType> =
+	React.ComponentProps<"div"> & {
+		title: string;
 		subtitle?: string;
-		action?: string;
-	};
-} & ComponentPropsWithRef<T>;
+		icon?: React.ReactNode;
+		action?: React.ReactNode;
+		property?: boolean;
+		as?: T;
+		classList?: {
+			root?: string;
+			icon?: string;
+			title?: string;
+			subtitle?: string;
+			action?: string;
+		};
+	} & React.ComponentPropsWithRef<T>;
 
-export function ActionRow<T extends ElementType = "div">({
+export function ActionRow<T extends React.ElementType = "div">({
 	title,
 	subtitle,
 	icon,

@@ -1,5 +1,4 @@
-import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const headerBarVariants = cva(
@@ -17,7 +16,7 @@ const headerBarVariants = cva(
 	},
 );
 
-type HeaderBarProps = ComponentProps<"header"> & {
+type HeaderBarProps = React.ComponentProps<"header"> & {
 	left?: React.ReactNode;
 	center?: React.ReactNode;
 	right?: React.ReactNode;

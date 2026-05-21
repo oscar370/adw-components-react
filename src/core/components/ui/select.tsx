@@ -1,7 +1,6 @@
-import { ComponentProps } from "react";
 import { cn } from "../../lib/utils";
 
-type SelectProps = ComponentProps<"select"> & {
+type SelectProps = React.ComponentProps<"select"> & {
 	title?: string;
 	classList?: {
 		root?: string;

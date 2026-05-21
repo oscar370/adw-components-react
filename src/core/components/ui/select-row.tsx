@@ -1,7 +1,6 @@
-import { ComponentProps } from "react";
 import { cn } from "../../lib/utils";
 
-type SelectRowProps = ComponentProps<"select"> & {
+type SelectRowProps = React.ComponentProps<"select"> & {
 	title: string;
 	subtitle?: string;
 	icon?: React.ReactNode;

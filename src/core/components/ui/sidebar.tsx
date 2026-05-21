@@ -1,15 +1,7 @@
 "use client";
 
 import { PanelLeft } from "lucide-react";
-import {
-	ComponentProps,
-	ComponentPropsWithRef,
-	createContext,
-	ElementType,
-	useContext,
-	useEffect,
-	useState,
-} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { cn } from "../../lib/utils";
 import { Button } from "./button";
 
@@ -37,7 +29,7 @@ export function SidebarProvider({
 	className,
 	defaultDesktopOpen = true,
 	...rest
-}: ComponentProps<"div"> & { defaultDesktopOpen?: boolean }) {
+}: React.ComponentProps<"div"> & { defaultDesktopOpen?: boolean }) {
 	const [isDesktopOpen, setIsDesktopOpen] = useState(defaultDesktopOpen);
 	const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -69,7 +61,7 @@ export function SidebarProvider({
 	);
 }
 
-type SidebarProps = ComponentProps<"aside">;
+type SidebarProps = React.ComponentProps<"aside">;
 
 export function Sidebar({ className, style, children, ...rest }: SidebarProps) {
 	const { isDesktopOpen, isMobileOpen, toggleSidebar } = useSidebar();
@@ -123,7 +115,7 @@ export function Sidebar({ className, style, children, ...rest }: SidebarProps) {
 	);
 }
 
-export function SidebarTrigger(props: ComponentProps<typeof Button>) {
+export function SidebarTrigger(props: React.ComponentProps<typeof Button>) {
 	const { toggleSidebar } = useSidebar();
 
 	return (
@@ -138,7 +130,10 @@ export function SidebarTrigger(props: ComponentProps<typeof Button>) {
 	);
 }
 
-export function SidebarContent({ className, ...rest }: ComponentProps<"div">) {
+export function SidebarContent({
+	className,
+	...rest
+}: React.ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(
@@ -150,7 +145,10 @@ export function SidebarContent({ className, ...rest }: ComponentProps<"div">) {
 	);
 }
 
-export function SidebarMenu({ className, ...rest }: ComponentProps<"ul">) {
+export function SidebarMenu({
+	className,
+	...rest
+}: React.ComponentProps<"ul">) {
 	return (
 		<ul
 			className={cn("flex w-full min-w-0 flex-col gap-1", className)}
@@ -159,17 +157,20 @@ export function SidebarMenu({ className, ...rest }: ComponentProps<"ul">) {
 	);
 }
 
-export function SidebarMenuItem({ className, ...rest }: ComponentProps<"li">) {
+export function SidebarMenuItem({
+	className,
+	...rest
+}: React.ComponentProps<"li">) {
 	return <li className={cn(className)} {...rest} />;
 }
 
-type SidebarMenuButtonProps<T extends ElementType> =
-	ComponentProps<"button"> & {
+type SidebarMenuButtonProps<T extends React.ElementType> =
+	React.ComponentProps<"button"> & {
 		isActive?: boolean;
 		as?: T;
-	} & ComponentPropsWithRef<T>;
+	} & React.ComponentPropsWithRef<T>;
 
-export function SidebarMenuButton<T extends ElementType = "button">({
+export function SidebarMenuButton<T extends React.ElementType = "button">({
 	isActive,
 	className,
 	children,
@@ -194,7 +195,7 @@ export function SidebarMenuButton<T extends ElementType = "button">({
 export function SidebarHeader({
 	className,
 	...props
-}: ComponentProps<"header">) {
+}: React.ComponentProps<"header">) {
 	return (
 		<header
 			className={cn(

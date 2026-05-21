@@ -1,14 +1,13 @@
-import { ChangeEvent, PropsWithChildren } from "react";
 import { cn } from "../../lib/utils";
 
-type SwitchProps = PropsWithChildren & {
+type SwitchProps = React.PropsWithChildren & {
 	title?: string;
 	classList?: {
 		root?: string;
 		title?: string;
 	};
 	checked?: boolean;
-	onChange?: (e?: ChangeEvent) => void;
+	onChange?: (e?: React.ChangeEvent) => void;
 };
 
 export function Switch({ title, classList, ...rest }: SwitchProps) {

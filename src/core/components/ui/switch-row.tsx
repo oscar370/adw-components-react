@@ -1,7 +1,6 @@
-import { ChangeEvent, PropsWithChildren } from "react";
 import { cn } from "../../lib/utils";
 
-type SwitchRowProps = PropsWithChildren & {
+type SwitchRowProps = React.PropsWithChildren & {
 	title: string;
 	subtitle?: string;
 	icon?: React.ReactNode;
@@ -13,7 +12,7 @@ type SwitchRowProps = PropsWithChildren & {
 		subtitle?: string;
 	};
 	checked?: boolean;
-	onChange?: (e?: ChangeEvent) => void;
+	onChange?: (e?: React.ChangeEvent) => void;
 };
 
 export function SwitchRow({

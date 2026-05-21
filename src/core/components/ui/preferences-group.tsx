@@ -1,7 +1,6 @@
-import { PropsWithChildren } from "react";
 import { cn } from "../../lib/utils";
 
-type PreferencesGroupProps = PropsWithChildren & {
+type PreferencesGroupProps = React.PropsWithChildren & {
 	title?: string;
 	description?: string;
 	actions?: React.ReactNode;

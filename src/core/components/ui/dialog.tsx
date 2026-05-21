@@ -1,13 +1,6 @@
 "use client";
 
-import {
-	ComponentProps,
-	createContext,
-	PropsWithChildren,
-	RefObject,
-	useContext,
-	useRef,
-} from "react";
+import { createContext, useContext, useRef } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "../../lib/utils";
 import { Button } from "./button";
@@ -21,14 +14,14 @@ export function useDialog() {
 }
 
 type DialogContextState = {
-	dialogRef: RefObject<HTMLDialogElement | null>;
+	dialogRef: React.RefObject<HTMLDialogElement | null>;
 	closeDialog: () => void;
 	openDialog: () => void;
 };
 
 const DialogContext = createContext<DialogContextState | null>(null);
 
-export function DialogProvider({ children }: PropsWithChildren) {
+export function DialogProvider({ children }: React.PropsWithChildren) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 	const closeDialog = () => dialogRef?.current?.close();
 	const openDialog = () => dialogRef?.current?.showModal();
@@ -40,7 +33,7 @@ export function DialogProvider({ children }: PropsWithChildren) {
 	);
 }
 
-type DialogProps = ComponentProps<"div"> & {
+type DialogProps = React.ComponentProps<"div"> & {
 	classList?: {
 		root?: string;
 		backdrop?: string;
@@ -97,7 +90,7 @@ export function Dialog({
 export function DialogTrigger({
 	children,
 	...rest
-}: ComponentProps<typeof Button>) {
+}: React.ComponentProps<typeof Button>) {
 	const { openDialog } = useDialog();
 
 	return (
@@ -111,7 +104,7 @@ export function DialogClose({
 	children,
 	variant = "pressed",
 	...rest
-}: ComponentProps<typeof Button>) {
+}: React.ComponentProps<typeof Button>) {
 	const { closeDialog } = useDialog();
 
 	return (

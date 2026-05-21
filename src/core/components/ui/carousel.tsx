@@ -1,11 +1,11 @@
 "use client";
 
-import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel, {
+	type UseEmblaCarouselType,
+} from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
-	ComponentProps,
 	createContext,
-	KeyboardEvent,
 	useCallback,
 	useContext,
 	useEffect,
@@ -35,7 +35,7 @@ export function useCarousel() {
 	return context;
 }
 
-type CarouselProps = ComponentProps<"div"> & {
+type CarouselProps = React.ComponentProps<"div"> & {
 	opts?: Parameters<typeof useEmblaCarousel>[0];
 	plugins?: Parameters<typeof useEmblaCarousel>[1];
 };
@@ -67,7 +67,7 @@ export function CarouselProvider({
 	}, [api]);
 
 	const handleKeyDown = useCallback(
-		(event: KeyboardEvent<HTMLDivElement>) => {
+		(event: React.KeyboardEvent<HTMLDivElement>) => {
 			if (event.key === "ArrowLeft") {
 				event.preventDefault();
 				scrollPrev();
@@ -143,7 +143,7 @@ export function CarouselPrevious({
 	className,
 	variant = "regular",
 	...props
-}: ComponentProps<typeof Button>) {
+}: React.ComponentProps<typeof Button>) {
 	const { scrollPrev, canScrollPrev } = useCarousel();
 
 	return (
