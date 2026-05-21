@@ -97,6 +97,7 @@
 	--shade: oklch(5.52% 0.0382 264.05deg);
 	--scrollbar-outline: oklch(100% 0 0);
 	--list-box-background: var(--view-background);
+	--expander-row-border: color-mix(in oklab, #000000 15%, transparent);
 	--hover: rgba(0, 0, 0, 0.03);
 }
 
@@ -146,6 +147,7 @@
 		--shade: oklch(5.52% 0.0382 264.05deg);
 		--scrollbar-outline: oklch(5.52% 0.0382 264.05deg);
 		--list-box-background: var(--button);
+		--expander-row-border: color-mix(in oklab, #ffffff 15%, transparent);
 		--hover: rgba(255, 255, 255, 0.03);
 	}
 }
@@ -244,6 +246,7 @@
 	--color-yellow-4: var(--yellow-4);
 	--color-yellow-5: var(--yellow-5);
 	--color-list-box-background: var(--list-box-background);
+	--color-expander-row-border: var(--expander-row-border);
 	--color-hover: var(--hover);
 }
 
