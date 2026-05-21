@@ -11,6 +11,5 @@ const config: StorybookConfig = {
 		"storybook-dark-mode",
 	],
 	framework: "@storybook/nextjs-vite",
-	staticDirs: ["../public"],
 };
 export default config;
