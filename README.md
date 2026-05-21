@@ -1,6 +1,6 @@
 A collection of Adwaita-based React components.
 
-[Demo](https://adw-components-react.netlify.app/)
+[Docs](https://adw-components-react.netlify.app/)
 
 ## Installation
 
