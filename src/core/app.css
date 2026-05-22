@@ -254,5 +254,4 @@ body {
 	background-color: var(--window-background);
 	color: var(--window-foreground);
 	font-family: "Inter", "Cantarell", sans-serif;
-	user-select: 0;
 }
