@@ -43,3 +43,6 @@ vitest.shims.d.ts
 
 *storybook.log
 storybook-static
+
+# nix
+.direnv

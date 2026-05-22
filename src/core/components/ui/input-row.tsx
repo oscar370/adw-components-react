@@ -9,13 +9,20 @@ type InputRowProps = React.ComponentProps<"input"> & {
 	};
 };
 
-export function InputRow({ title, classList, ...rest }: InputRowProps) {
+export function InputRow({
+	title,
+	classList,
+	className,
+	...rest
+}: InputRowProps) {
 	return (
 		<li className={classList?.root}>
 			<label
 				className={cn(
 					"flex min-h-12 w-full flex-col items-start justify-center px-4 transition-colors",
 					"hover:bg-hover cursor-text",
+					"has-user-invalid:bg-destructive-background has-user-invalid:text-destructive-foreground",
+					"has-aria-invalid:bg-destructive-background has-aria-invalid:text-destructive-foreground",
 					classList?.label,
 				)}
 			>
@@ -33,6 +40,7 @@ export function InputRow({ title, classList, ...rest }: InputRowProps) {
 				<input
 					className={cn(
 						"w-full cursor-text outline-none disabled:cursor-not-allowed disabled:opacity-60",
+						className,
 					)}
 					{...rest}
 				/>

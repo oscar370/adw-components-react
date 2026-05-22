@@ -8,17 +8,33 @@ type InputProps = React.ComponentProps<"input"> & {
 	};
 };
 
-export function Input({ title, classList, ...rest }: InputProps) {
+export function Input({ title, classList, className, ...rest }: InputProps) {
 	return (
-		<label className={cn("flex w-full flex-col gap-0.5", classList?.root)}>
-			{title && <span className={cn("ml-px", classList?.title)}>{title}</span>}
-
+		<label
+			className={cn("flex w-full flex-col-reverse gap-0.5", classList?.root)}
+		>
 			<input
 				className={cn(
-					"bg-button min-h-8 w-full cursor-text rounded-lg px-2 outline-none disabled:cursor-not-allowed disabled:opacity-60",
+					"bg-button peer min-h-8 w-full cursor-text rounded-lg px-2 outline-none disabled:cursor-not-allowed disabled:opacity-60",
+					"user-invalid:bg-destructive-background user-invalid:text-destructive",
+					"aria-invalid:bg-destructive-background aria-invalid:text-destructive",
+					className,
 				)}
 				{...rest}
 			/>
+
+			{title && (
+				<span
+					className={cn(
+						"ml-px",
+						"peer-user-invalid:text-destructive",
+						"peer-aria-invalid:text-destructive",
+						classList?.title,
+					)}
+				>
+					{title}
+				</span>
+			)}
 		</label>
 	);
 }

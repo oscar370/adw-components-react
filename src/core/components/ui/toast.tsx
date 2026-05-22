@@ -20,7 +20,7 @@ export function Toaster({ ...rest }: ToasterProps) {
 			toastOptions={{
 				classNames: {
 					toast: "bg-popover-background! text-popover-foreground! border-none!",
-					closeButton: "bg-button! text-window-foreground! border-none!",
+					closeButton: "bg-button! text-window-foreground! border-shade/15!",
 				},
 			}}
 			closeButton={true}

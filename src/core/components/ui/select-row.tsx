@@ -18,6 +18,7 @@ export function SelectRow({
 	subtitle,
 	icon,
 	classList,
+	className,
 	...rest
 }: SelectRowProps) {
 	return (
@@ -45,6 +46,7 @@ export function SelectRow({
 				<select
 					className={cn(
 						"bg-button rounded-md p-2 disabled:cursor-not-allowed disabled:opacity-60",
+						className,
 					)}
 					{...rest}
 				/>

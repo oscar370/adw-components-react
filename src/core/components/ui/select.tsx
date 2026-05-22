@@ -8,7 +8,7 @@ type SelectProps = React.ComponentProps<"select"> & {
 	};
 };
 
-export function Select({ title, classList, ...rest }: SelectProps) {
+export function Select({ title, classList, className, ...rest }: SelectProps) {
 	return (
 		<label className={cn("flex w-full flex-col gap-0.5", classList?.root)}>
 			{title && <span className={cn("ml-px", classList?.title)}>{title}</span>}
@@ -16,6 +16,7 @@ export function Select({ title, classList, ...rest }: SelectProps) {
 			<select
 				className={cn(
 					"bg-button min-h-8 w-full rounded-lg px-2 disabled:cursor-not-allowed disabled:opacity-60",
+					className,
 				)}
 				{...rest}
 			/>

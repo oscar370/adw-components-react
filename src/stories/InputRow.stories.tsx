@@ -21,3 +21,15 @@ export const Default: Story = {
 		</PreferencesGroup>
 	),
 };
+
+export const Invalid: Story = {
+	args: {
+		title: "Name",
+		"aria-invalid": true,
+	},
+	render: (args) => (
+		<PreferencesGroup>
+			<InputRow {...args} />
+		</PreferencesGroup>
+	),
+};

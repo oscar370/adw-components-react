@@ -35,7 +35,7 @@ function Children() {
 	return (
 		<>
 			<ActionRow title="Action Row" as="a" action={<ChevronRight />} />
-			<InputRow title="Input Row" />
+			<InputRow title="Input Row" required />
 			<SelectRow title="Select Row">
 				<option> Option 1 </option>
 				<option> Option 2 </option>
