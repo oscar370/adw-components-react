@@ -8,7 +8,13 @@ type InputProps = React.ComponentProps<"input"> & {
 	};
 };
 
-export function Input({ title, classList, className, ...rest }: InputProps) {
+export function Input({
+	title,
+	classList,
+	className,
+	required,
+	...rest
+}: InputProps) {
 	return (
 		<label
 			className={cn("flex w-full flex-col-reverse gap-0.5", classList?.root)}
@@ -20,11 +26,12 @@ export function Input({ title, classList, className, ...rest }: InputProps) {
 					"aria-invalid:bg-destructive-background aria-invalid:text-destructive",
 					className,
 				)}
+				required={required}
 				{...rest}
 			/>
 
 			{title && (
-				<span
+				<div
 					className={cn(
 						"ml-px",
 						"peer-user-invalid:text-destructive",
@@ -32,8 +39,9 @@ export function Input({ title, classList, className, ...rest }: InputProps) {
 						classList?.title,
 					)}
 				>
-					{title}
-				</span>
+					<span>{title}</span>
+					{required && <span className="text-destructive">*</span>}
+				</div>
 			)}
 		</label>
 	);
